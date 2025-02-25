@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLock Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            --secondary-gradient: linear-gradient(135deg, #f6f9fc, #e9f1f9);
+            --accent-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --nav-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            height: var(--nav-height);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #667eea;
+        }
+
+        .home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .home h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .home p {
+            font-size: 1.5rem;
+            font-weight: 300;
+            max-width: 700px;
+        }
+
+        .section {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+        }
+
+        .section p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+        }
+
+        .features-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            justify-content: center;
+            align-items: center;
+            max-width: 900px;
+            margin: auto;
+            padding: 3rem 0;
+        }
+
+        .features, .lane-detection, .pothole-detection, .audio-alerts {
+            background: white;
+            width: 370px;
+            height: 370px;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .safety {
+            grid-column: span 2;
+            width: 100%;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-qrcode"></i>
+            DriveLock Pro
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="{{ url_for('about') }}" class="active"><i class="fas fa-map-marker-alt"></i> Live Tracking</a>
+            <a href="{{ url_for('index') }}"><i class="fas fa-qrcode"></i> QR Access</a>
+            <a href="{{ url_for('booking') }}"><i class="fas fa-car"></i> Reserve Slot</a>
+            <a href="{{ url_for('history') }}"><i class="fas fa-clock"></i> Activity Log</a>
+        </div>
+    </nav>
+
+    <section class="home">
+        <h1>DriveLock Pro: Effortless Parking & Safe Driving</h1>
+        <p>"Reserve. Access. Drive with Confidence."</p>
+    </section>
+    <div class="features-container">
+        <div class="features">
+            <h2>🔹 Lane Detection & Assistance</h2>
+            <p>Our AI-powered system detects lane markings and warns drivers if they drift out of their lane, reducing the risk of collisions.</p>
+        </div>
+        <div class="lane-detection">
+            <h2>🔹 Pothole Detection & Alerts</h2>
+            <p>Detects potholes and rough road surfaces, issuing instant audio alerts to help drivers take necessary action.</p>
+        </div>
+        <div class="pothole-detection">
+            <h2>🔹 Audio Alerts for Safety</h2>
+            <p>Provides real-time sound notifications for lane departures, potholes, and nearby vehicles to enhance driver response time.</p>
+        </div>
+        <div class="audio-alerts">
+            <h2>🔹 Secure Driving</h2>
+            <p>Advanced AI ensures road safety, helping you navigate smoothly and avoid potential dangers.</p>
+        </div>
+    </div>
+</body>
+</html>

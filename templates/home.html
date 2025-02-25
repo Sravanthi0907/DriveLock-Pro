@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLock Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            --secondary-gradient: linear-gradient(135deg, #f6f9fc, #e9f1f9);
+            --accent-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --nav-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            height: var(--nav-height);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a i {
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-links a.active {
+            color: #667eea;
+            text-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Home Section */
+        .home {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+        }
+
+        .home h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .home p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            margin-top: 2rem;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: white;
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(135deg, #5a67d8, #553c9a);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-qrcode"></i>
+            DriveLock Pro
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}" class="active"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="{{ url_for('about') }}"><i class="fas fa-map-marker-alt"></i> Live Tracking</a>
+            <a href="{{ url_for('index') }}"><i class="fas fa-qrcode"></i> QR Access</a>
+            <a href="{{ url_for('booking') }}"><i class="fas fa-car"></i> Reserve Slot</a>
+            <a href="{{ url_for('history') }}"><i class="fas fa-clock"></i> Activity Log</a>
+        </div>
+        
+    </nav>
+
+    <section class="home">
+        <h1>DriveLock Pro: Effortless Parking & Safe Driving</h1>
+        <p>"Reserve. Access. Drive with Confidence."</p>
+    </section>
+</body>
+</html>

@@ -1,0 +1,1087 @@
+[
+    {
+        "timestamp": "2025-02-11T12:03:52.223681",
+        "stand": 4,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T12:05:08.235658",
+        "stand": "2",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T12:06:29.781624",
+        "stand": "2",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T12:06:39.487012",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T12:06:54.632860",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T12:07:00.317625",
+        "stand": "2",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T12:10:35.435889",
+        "stand": 5,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T12:11:00.153046",
+        "stand": 3,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T12:13:09.419186",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T12:13:38.207653",
+        "stand": 3,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T12:14:01.223767",
+        "stand": 4,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T13:22:02.213425",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:27:11.199931",
+        "stand": "2",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:27:23.849557",
+        "stand": 3,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T13:27:31.062950",
+        "stand": "2",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:27:36.506030",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:36:08.183992",
+        "stand": "8",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:36:15.633629",
+        "stand": "8",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:36:20.610846",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:36:25.116822",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:39:03.815418",
+        "stand": "8",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:39:18.964145",
+        "stand": "8",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:42:29.522159",
+        "stand": "7",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:43:35.871779",
+        "stand": "7",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-11T13:46:25.989145",
+        "stand": "8",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:48:28.350665",
+        "stand": 4,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T13:50:04.417469",
+        "stand": 8,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T13:55:49.891933",
+        "stand": "3",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:56:07.041614",
+        "stand": "7",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:56:23.996594",
+        "stand": 9,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-11T13:56:45.169449",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-11T13:57:34.184628",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-12T12:56:10.290584",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T12:57:29.622735",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:05:10.826111",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:05:23.798986",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:08:15.184332",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-12T13:08:24.751520",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-12T13:08:37.468420",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:08:48.090737",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:09:01.099716",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-12T13:09:11.260365",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-12T13:09:17.378179",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:12:17.941751",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:12:48.185915",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:16:01.645894",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:23:39.215707",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-12T13:23:47.485380",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:23:59.676260",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T13:24:08.774593",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-12T13:24:14.877217",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-12T22:32:12.854561",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T22:32:23.661239",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-12T22:32:34.630804",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T17:42:07.153787",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T17:42:23.647222",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T17:50:41.189812",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T17:50:53.919267",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T17:51:49.999049",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-22T17:59:10.257622",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T17:59:31.022306",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:00:08.727892",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T18:00:18.253642",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:00:29.144033",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T18:02:32.037155",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:02:37.668654",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:05:24.029582",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T18:07:58.005143",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:08:19.324580",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T18:13:36.213292",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T18:13:50.617216",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:13:54.913376",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T18:17:27.883767",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-22T20:59:58.731840",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:02:02.015242",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:02:07.868882",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:06:33.100056",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:07:14.336079",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:13:08.025690",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:13:21.429115",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:23:55.502400",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:24:07.415117",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:34:06.134617",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:34:18.129050",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:38:31.948689",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:43:35.597593",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:43:57.312592",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:44:00.826475",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:45:23.688659",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:45:36.463017",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:51:14.131545",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:51:41.461857",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:55:08.728451",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:55:22.611287",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T21:59:17.649593",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T21:59:33.715731",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T22:01:28.062337",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T22:01:41.106639",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T22:10:24.976714",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T22:13:17.679189",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T22:13:40.909723",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T22:13:58.062250",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T22:15:28.001619",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-22T22:17:03.413117",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-22T22:17:43.209204",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-23T12:38:22.074460",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-23T12:50:42.565042",
+        "stand": "2",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T12:50:55.885686",
+        "stand": "2",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T12:51:00.179920",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T12:51:33.842076",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T12:51:56.681824",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T12:52:41.648285",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:04:54.567761",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:05:03.648821",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:08:55.050199",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:09:04.279299",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:14:35.220897",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:14:59.850042",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:15:08.327032",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:15:23.519978",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:19:21.066014",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:19:56.677817",
+        "stand": "1",
+        "action": "unlock",
+        "user": "12345",
+        "status": "opened"
+    },
+    {
+        "timestamp": "2025-02-23T13:20:02.141368",
+        "stand": "1",
+        "action": "lock",
+        "user": "12345",
+        "status": "locked"
+    },
+    {
+        "timestamp": "2025-02-23T13:52:12.432402",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T00:10:28.023763",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T00:10:33.246912",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T00:13:23.072742",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T00:52:48.608192",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T01:32:46.359334",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T01:33:03.995244",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T18:36:23.790525",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:44:58.247529",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:45:10.164653",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:45:46.595266",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:45:57.017421",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:46:01.743748",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:46:09.794520",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:48:34.743376",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:49:25.875003",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:49:38.005922",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:49:41.201568",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:50:39.384346",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:50:54.347312",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:53:38.211438",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:53:54.580092",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:56:44.612968",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:56:58.650313",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T21:57:48.694758",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T21:58:47.994013",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T22:02:58.807120",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T22:03:32.120028",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T22:06:59.871560",
+        "stand": 1,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T22:07:23.532554",
+        "stand": 1,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    },
+    {
+        "timestamp": "2025-02-25T22:09:59.353699",
+        "stand": 2,
+        "action": "book",
+        "user": "user123",
+        "status": "booked"
+    },
+    {
+        "timestamp": "2025-02-25T22:10:09.069156",
+        "stand": 2,
+        "action": "cancel",
+        "user": "user123",
+        "status": "cancelled"
+    }
+]

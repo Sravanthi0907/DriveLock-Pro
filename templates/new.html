@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLock Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            --secondary-gradient: linear-gradient(135deg, #f6f9fc, #e9f1f9);
+            --accent-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --nav-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: var(--nav-height);
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            height: var(--nav-height);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a i {
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #667eea;
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .content {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h2 {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        button {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 24px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+            margin: 1rem;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(102, 126, 234, 0.3);
+        }
+
+        .history {
+            width: 100%;
+            max-width: 500px;
+            background: white;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-qrcode"></i> DriveLock Pro
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="{{ url_for('about') }}"><i class="fas fa-map-marker-alt"></i> Live Tracking</a>
+            <a href="{{ url_for('index') }}"><i class="fas fa-qrcode"></i> QR Access</a>
+            <a href="{{ url_for('booking') }}"><i class="fas fa-car"></i> Reserve Slot</a>
+            <a href="{{ url_for('history') }}" class="active"><i class="fas fa-clock"></i> Activity Log</a>
+        </div>
+        
+    </nav>
+
+    <div class="content">
+        <h2>Get The Access</h2>
+        <button id="lockBtn">Lock the slot</button>
+        <button id="unlockBtn">Unlock the slot</button>
+        <div class="history">
+            <h3>The History</h3>
+            <ul id="historyList"></ul>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lockBtn = document.getElementById("lockBtn");
+            const unlockBtn = document.getElementById("unlockBtn");
+            const historyList = document.getElementById("historyList");
+
+            function addHistory(action) {
+                const timestamp = new Date().toLocaleString();
+                const listItem = document.createElement("li");
+                listItem.textContent = `${action} at ${timestamp}`;
+                historyList.appendChild(listItem);
+            }
+
+            lockBtn.addEventListener("click", () => {
+                addHistory("Locked");
+                alert("Slot Locked");
+            });
+
+            unlockBtn.addEventListener("click", () => {
+                addHistory("Unlocked");
+                alert("Slot Unlocked");
+            });
+        });
+    </script>
+</body>
+</html>

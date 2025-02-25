@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DriveLock Pro</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6e8efb, #4a6cf7);
+            --secondary-gradient: linear-gradient(135deg, #f6f9fc, #e9f1f9);
+            --accent-gradient: linear-gradient(135deg, #667eea, #764ba2);
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --nav-height: 70px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--secondary-gradient);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            height: var(--nav-height);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+            filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a i {
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+            text-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+        }
+
+        .nav-links a.active {
+            color: #667eea;
+            text-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+        }
+
+
+        .container {
+            margin-top: calc(var(--nav-height) + 3rem);
+            padding: 0 4rem;
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #selected-stand-message {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+        }
+
+        .parking-lot {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
+            gap: 2rem;
+            justify-content: center;
+            padding: 2rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .parking-stand {
+            aspect-ratio: 1;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .parking-stand:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .parking-stand:active {
+            background: rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .parking-stand.locked {
+            background: var(--accent-gradient);
+            color: white;
+            pointer-events: none;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .modal-content h2 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .modal-content input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .modal-content input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+        }
+
+        .modal-content button {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            margin: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-content button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(102, 126, 234, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .parking-lot {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .parking-stand {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .user-dropdown {
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-qrcode"></i>
+            DriveLock Pro
+        </div>
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="{{ url_for('about') }}"><i class="fas fa-map-marker-alt"></i> Live Tracking</a>
+            <a href="{{ url_for('index') }}"><i class="fas fa-qrcode"></i> QR Access</a>
+            <a href="{{ url_for('booking') }}" class="active"><i class="fas fa-car"></i> Reserve Slot</a>
+            <a href="{{ url_for('history') }}"><i class="fas fa-clock"></i> Activity Log</a>
+        </div>
+        
+
+    </nav>
+
+    <div class="container" id="parking-page">
+        <h1>Reserve Slot</h1>
+        <div class="parking-lot">
+            <div class="parking-stand" onclick="openBooking(1)">Stand 1</div>
+            <div class="parking-stand" onclick="openBooking(2)">Stand 2</div>
+        </div>
+    </div>
+
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <h2>Reserve your Slot</h2>
+            <input type="datetime-local" id="startTime">
+            <input type="datetime-local" id="endTime">
+            <button onclick="confirmBooking()">Confirm</button>
+            <button onclick="closeBookingModal()">Cancel</button>
+        </div>
+    </div>
+
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <h2>Payment Processing</h2>
+            <p>Processing your payment...</p>
+            <div id="paymentTimer"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentStand = null;
+        const HOURLY_RATE = 100; // Example pricing logic
+
+        function openBooking(standNumber) {
+            currentStand = standNumber;
+            document.getElementById('bookingModal').style.display = 'block';
+        }
+
+        function confirmBooking() {
+            const startTime = document.getElementById('startTime').value;
+            const endTime = document.getElementById('endTime').value;
+
+            if (!startTime || !endTime || !currentStand) {
+                alert("Please select all details.");
+                return;
+            }
+
+            document.getElementById('bookingModal').style.display = 'none';
+            document.getElementById('paymentModal').style.display = 'block';
+
+            setTimeout(() => {
+                const amount = 10; // Example pricing logic
+                processPayment(startTime, endTime, amount);
+            }, 2000); // Simulating payment delay
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            // Reset the form fields
+            document.getElementById('startTime').value = '';
+            document.getElementById('endTime').value = '';
+            currentStand = null;
+        }
+
+        function processPayment(startTime, endTime, amount) {
+            document.getElementById('paymentModal').style.display = 'none';
+            
+            if (!currentStand) return;
+
+            const stands = document.querySelectorAll('.parking-stand');
+            stands[currentStand - 1];
+
+            const registration = {
+                id: Date.now(),
+                standNumber: currentStand,
+                startTime,
+                endTime,
+                paymentStatus: 'Successful',
+                amountPaid: amount
+            };
+
+            fetch("/save_booking", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(registration)
+            })
+            .then(response => response.json())
+            .then(data => console.log("Booking saved:", data))
+            .catch(error => console.error("Error saving booking:", error));
+
+            alert('Payment Successful!');
+        }
+
+        window.onload = function() {
+            fetch("/get_history")
+                .then(response => response.json())
+                .then(history => {
+                    history.forEach(entry => {
+                        const endTime = new Date(entry.endTime);
+                        if (new Date() < endTime) {
+                            // Add the locked class instead of trying to set background directly
+                            document.querySelectorAll('.parking-stand')[entry.standNumber - 1].classList.add('locked');
+                        }
+                    });
+                })
+                .catch(error => console.error("Error loading history:", error));
+        };
+                
+
+        function toggleUserDropdown() {
+            const dropdown = document.getElementById('user-dropdown');
+            dropdown.classList.toggle('active');
+        }
+
+        function logout() {
+            alert('Logged out successfully');
+            window.location.href = 'login.html';
+        }
+
+        window.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('user-dropdown');
+            const userIcon = document.querySelector('.user-icon');
+            
+            if (!dropdown.contains(event.target) && !userIcon.contains(event.target)) {
+                dropdown.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>
